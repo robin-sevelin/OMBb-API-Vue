@@ -29,7 +29,7 @@
     <div class="movies-container">
       <div class="movie" v-for="movie in movies">
         <h3>{{ movie.Title }}, {{ movie.Year }}</h3>
-        <img :src="movie.Poster" alt="{{ movie.Title }}" />
+        <img :src="movie.Poster" :alt="movie.Title" />
         <a href="#">Read more</a>
       </div>
     </div>
