@@ -15,6 +15,6 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100px;
+    padding: 2rem;
   }
 </style>
