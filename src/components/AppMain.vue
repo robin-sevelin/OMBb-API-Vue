@@ -1,11 +1,21 @@
 <script setup lang="ts">
   import axios from 'axios';
   import { IMovie } from './models/IMovie';
-  import { ref } from 'vue';
+  import { onMounted, ref } from 'vue';
   import { IResponse } from './models/IResponse';
 
   const input = ref('');
+
   const movies = ref<IMovie[]>([]);
+
+  onMounted(() => {
+    const searchText = localStorage.getItem('searchText') || 'harry';
+    axios
+      .get('https://www.omdbapi.com/?apikey=8b10bddd&s=' + searchText)
+      .then((response) => {
+        movies.value = response.data.Search;
+      });
+  });
 
   const fetchApi = async () => {
     const response = await axios.get<IResponse>(
@@ -13,6 +23,7 @@
     );
 
     movies.value = response.data.Search;
+    localStorage.setItem('searchText', input.value);
     input.value = '';
   };
 </script>
