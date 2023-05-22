@@ -44,12 +44,11 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 2rem;
-    max-width: 500px;
   }
 
   .button-container {
     padding-top: 1rem;
-    max-width: 500px;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -88,6 +87,7 @@
     height: 50px;
     width: 75px;
     border-radius: 10px;
+    color: black;
   }
 
   button:hover {
