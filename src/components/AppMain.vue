@@ -9,7 +9,7 @@
 
   const fetchApi = async () => {
     const response = await axios.get<IResponse>(
-      'http://www.omdbapi.com/?apikey=8b10bddd&s=' + input.value
+      'https://www.omdbapi.com/?apikey=8b10bddd&s=' + input.value
     );
 
     movies.value = response.data.Search;

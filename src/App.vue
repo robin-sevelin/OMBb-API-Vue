@@ -7,7 +7,7 @@
 <template>
   <AppHeader msg="OMDb movie search" />
   <AppMain />
-  <AppFooter msg="Made with" vue="/vue.svg" vite="/vite.svg" />
+  <AppFooter msg="Made with" vue="vue.svg" vite="vite.svg" />
 </template>
 
 <style scoped></style>
