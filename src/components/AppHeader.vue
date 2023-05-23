@@ -1,10 +1,11 @@
 <script setup lang="ts">
   defineProps<{ msg: String }>();
+  const isTrue = true;
 </script>
 
 <template>
   <header>
-    <h1>{{ msg }}</h1>
+    <h1 :class="{ red: isTrue, blue: !isTrue }">{{ msg }}</h1>
   </header>
 </template>
 
@@ -15,5 +16,12 @@
     justify-content: center;
     align-items: center;
     padding: 2rem;
+  }
+  .red {
+    color: red;
+  }
+
+  .blue {
+    color: blue;
   }
 </style>
