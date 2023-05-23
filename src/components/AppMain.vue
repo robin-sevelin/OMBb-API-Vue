@@ -1,8 +1,8 @@
 <script setup lang="ts">
   import axios from 'axios';
-  import { IMovie } from './models/IMovie';
+  import { IMovie } from '../models/IMovie';
   import { onMounted, ref } from 'vue';
-  import { IResponse } from './models/IResponse';
+  import { IResponse } from '../models/IResponse';
 
   const input = ref('');
 
