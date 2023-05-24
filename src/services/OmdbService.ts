@@ -1,4 +1,7 @@
 import axios from 'axios';
+import { IResponse } from '../models/IResponse';
+import { IMovie } from '../models/IMovie';
+import { IMovieExt } from '../models/IMovieEtx';
 
 const BASE_URL = `https://www.omdbapi.com/?apikey=${
   import.meta.env.VITE_API_KEY
