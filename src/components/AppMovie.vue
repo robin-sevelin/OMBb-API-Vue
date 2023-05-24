@@ -1,18 +1,21 @@
 <script setup lang="ts">
-  import { IMovieProps } from './models/IMovieProps';
+  import { IMovieProps } from '../models/IMovieProps';
+  import { getMovieById } from '../services/OmdbService';
 
   const props = defineProps<IMovieProps>();
+
+  const handleClick = async () => {
+    let movie = await getMovieById(props.movie.imdbID);
+
+    console.log(movie.Title);
+  };
 </script>
 
 <template>
   <div class="movie">
     <h3>{{ props.movie.Title }}</h3>
     <img :src="props.movie.Poster" :alt="props.movie.Title" />
-    <a
-      target="_blank"
-      :href="`https://www.imdb.com/title/${props.movie.imdbID}`"
-      >Read more</a
-    >
+    <button @click="handleClick">Read more..</button>
   </div>
 </template>
 

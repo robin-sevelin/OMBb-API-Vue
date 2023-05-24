@@ -18,7 +18,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 100px;
+
     width: 100%;
     position: absolute;
     bottom: 0;
