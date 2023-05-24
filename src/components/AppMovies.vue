@@ -24,6 +24,7 @@
     );
 
     movies.value = response.data.Search;
+
     localStorage.setItem('searchText', input.value);
     input.value = '';
   };
@@ -37,7 +38,7 @@
     </form>
   </div>
   <div class="movies-container">
-    <AppMovie :movie="movie" v-for="movie in movies" :key="movie.imdbID" />
+    <AppMovie :movie="movie" v-for="movie in movies" />
   </div>
 </template>
 

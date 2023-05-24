@@ -8,8 +8,11 @@
   <div class="movie">
     <h3>{{ props.movie.Title }}</h3>
     <img :src="props.movie.Poster" :alt="props.movie.Title" />
-    <p>{{ props.movie.Year }}</p>
-    <a href="#">Read more</a>
+    <a
+      target="_blank"
+      :href="`https://www.imdb.com/title/${props.movie.imdbID}`"
+      >Read more</a
+    >
   </div>
 </template>
 
