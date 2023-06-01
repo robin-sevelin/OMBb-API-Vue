@@ -18,10 +18,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     width: 100%;
     position: absolute;
     bottom: 0;
+    height: 50px;
   }
 
   .img-container {

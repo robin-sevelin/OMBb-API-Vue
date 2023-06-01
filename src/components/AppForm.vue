@@ -39,13 +39,6 @@
     align-items: center;
   }
 
-  button {
-    height: 50px;
-    width: 75px;
-    border-radius: 10px;
-    color: black;
-  }
-
   button:hover {
     cursor: pointer;
     background-color: black;

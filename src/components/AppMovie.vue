@@ -1,21 +1,14 @@
 <script setup lang="ts">
   import { IMovieProps } from '../models/IMovieProps';
-  import { getMovieById } from '../services/OmdbService';
 
   const props = defineProps<IMovieProps>();
-
-  const handleClick = async () => {
-    let movie = await getMovieById(props.movie.imdbID);
-
-    console.log(movie.Title);
-  };
 </script>
 
 <template>
   <div class="movie">
     <h3>{{ props.movie.Title }}</h3>
     <img :src="props.movie.Poster" :alt="props.movie.Title" />
-    <button @click="handleClick">Read more..</button>
+    <RouterLink :to="'/about/' + props.movie.imdbID">..read more ℹ️</RouterLink>
   </div>
 </template>
 

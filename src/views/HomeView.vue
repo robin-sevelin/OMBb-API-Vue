@@ -1,11 +1,9 @@
 <script setup lang="ts">
-  import AppMovies from './AppMovies.vue';
+  import AppMain from '../components/AppMain.vue';
 </script>
 
 <template>
-  <main>
-    <AppMovies />
-  </main>
+  <AppMain />
 </template>
 
 <style scoped></style>
