@@ -11,6 +11,7 @@
   onMounted(() => {
     getMovieById(route.params.id.toString()).then((movieFromApi) => {
       movie.value = movieFromApi;
+      console.log(movieFromApi);
     });
   });
 </script>

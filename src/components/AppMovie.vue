@@ -8,7 +8,7 @@
   <div class="movie">
     <h3>{{ props.movie.Title }}</h3>
     <img :src="props.movie.Poster" :alt="props.movie.Title" />
-    <RouterLink :to="'/about/' + props.movie.imdbID">..read more ℹ️</RouterLink>
+    <RouterLink :to="'/about/' + props.movie.imdbID">..read more</RouterLink>
   </div>
 </template>
 
