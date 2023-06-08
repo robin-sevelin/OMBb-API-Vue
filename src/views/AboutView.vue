@@ -21,25 +21,36 @@
   <div class="about">
     <h3>{{ movie?.Title }}</h3>
     <p>{{ movie?.Plot }}</p>
-    <p>Runtime: {{ movie?.Runtime }}</p>
-    <p>Genre: {{ movie?.Genre }}</p>
-    <p>Year: {{ movie?.Year }}</p>
-    <p>Director: {{ movie?.Director }}</p>
-    <img :src="movie?.Poster" :alt="movie?.Title" width="150" />
+    <ul>
+      <li>Runtime: {{ movie?.Runtime }}</li>
+      <li>Genre: {{ movie?.Genre }}</li>
+      <li>Year: {{ movie?.Year }}</li>
+      <li>Director: {{ movie?.Director }}</li>
+      <li>Rating: {{ movie?.imdbRating }}</li>
+      <li>Rated: {{ movie?.Rated }}</li>
+    </ul>
+    <img :src="movie?.Poster" :alt="movie?.Title" width="200" />
     <RouterLink to="/">take me back</RouterLink>
   </div>
 </template>
 
 <style scoped>
-  p,
-  img {
-    margin-bottom: 1rem;
+  li {
+    list-style: none;
+  }
+  img,
+  ul {
+    margin-block: 1rem;
   }
   .about {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 600px;
     margin: auto;
+    padding: 1rem;
+    margin-bottom: 100px;
   }
 
   h3 {
