@@ -6,9 +6,9 @@
 
 <template>
   <div class="movie">
-    <h3>{{ props.movie.Title }}</h3>
-    <img :src="props.movie.Poster" :alt="props.movie.Title" />
-    <RouterLink :to="'/about/' + props.movie.imdbID">..read more</RouterLink>
+    <RouterLink :to="'/about/' + props.movie.imdbID">
+      <img :src="props.movie.Poster" :alt="props.movie.Title"
+    /></RouterLink>
   </div>
 </template>
 
@@ -22,14 +22,15 @@
     align-items: center;
   }
 
-  H3 {
-    padding-bottom: 1rem;
-  }
-
   img {
     padding-top: 2rem;
     padding-bottom: 2rem;
     height: 400px;
     width: 275px;
+  }
+
+  a:hover {
+    transition: 0.5s ease-in-out;
+    scale: 1.1;
   }
 </style>
